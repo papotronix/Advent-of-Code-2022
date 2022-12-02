@@ -4,6 +4,7 @@ start = time.time()
 calories = open('Day_1/input.txt', 'r', newline=None).read().split('\n')
 #print(calories)
 
+## Part 1
 calorie_list = [[]]
 elf_counter = 0
 for n in calories:
@@ -22,11 +23,10 @@ print(max(calorie_total_per_elf))
 # The elf carrying the most calories is
 print(calorie_total_per_elf.index(max(calorie_total_per_elf)) + 1) 
 
+## Part 2
 # Sum of calories carried by the top three elves
 top_three_elves = sorted(calorie_total_per_elf)[-3:]
 print(sum(top_three_elves))
 
 end = time.time()
 print("Execution time: ", end - start)
-
-sorted(calorie_total_per_elf, reverse=True)[:3]
