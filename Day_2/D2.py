@@ -1,17 +1,16 @@
 import time
 start = time.time()
 
+strategy_list = open('Day_2/input.txt', 'r', newline=None).read().replace(" " ,"").split('\n')
+#print(strategy)
 
+## Part 1
 score_map_1 = {
     'AX': 4, 'AY': 8, 'AZ': 3, 
     'BX': 1, 'BY': 5, 'BZ': 9,
     'CX': 7, 'CY': 2, 'CZ': 6
 }
 
-strategy_list = open('Day_2/input.txt', 'r', newline=None).read().replace(" " ,"").split('\n')
-#print(strategy)
-
-## Part 1
 total_score = 0
 for round in strategy_list:
     total_score += score_map_1[round]
